@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>table, th,td {border: 2px solid blueviolet;}</style>  
+  <title>Sentiment Analysis</title>
+</head>
+<body>
+  <ul></ul>
+  <h2> Movie Sentiment Analysis </h2>
+  <p>
+    "Kirubananth - TLP'23"
+  </p>
+  <hr><hr>
+  <b>Navigation Bar</b>
+  <a href="/home">Home</a>
+  <a href="/data">Data</a>
+  <hr><hr>
+ <!-- Code starts for the data page-->
+ <h3>Other reviews in the databse:</h3>
+ <table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Review</th>
+      <th>Prediction</th>
+      <th>Feedback</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{row["id"]}}</td>
+      <td>{{row["review"]}}</td>
+      <td>{{row["prediction"]}}</td>
+      <td>{{row["feedback"]}}</td>
+    </tr> 
+    {% endfor %}
+  </tbody>
+ </table>
+
+ <a href = "/home">Back</a>
+</body>
+</html>

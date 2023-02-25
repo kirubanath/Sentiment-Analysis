@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>table, th,td {border: 2px solid blueviolet;}</style>  
+  <title>Sentiment Analysis</title>
+</head>
+<body>
+  <ul></ul>
+  <h2> Movie Sentiment Analysis </h2>
+  <p>
+    "Kirubananth - TLP'23"
+  </p>
+  <hr><hr>
+  <b>Navigation Bar</b>
+  <a href="/home">Home</a>
+  <a href="/data">Data</a>
+  <hr><hr>
+ {% block content %}
+ <div class = "result_show">
+    <p>
+        This movie has {{value1}} Sentiment with {{value2}}% probability
+    </p>
+ </div>
+
+ <div class = "Feedback">
+    <p>
+        Please help the model get better by giving your feedback.
+    </p>
+    <form method="POST">
+        <label for = "Correct">Right</label>
+        <input type = "radio" id = "correct" name = "rate" value = "right">
+        <br><br>
+        <label for = "Incorrect">Wrong</label>
+        <input type="radio" id ="incorrect" name = "rate" value ="wrong">
+        <br><br>
+        <input type = "submit" value="Submit">
+        <hr>
+        <b>your text: {{value3}}</b>
+    </form>
+ </div>
+ {% endblock %}
+</body>
+</html>
